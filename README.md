@@ -1,19 +1,19 @@
-# Quickstart Guide to Install and Configure ownCloud
+# Quickstart Guide
 ## ownCloud - Scope, Need and Benefits
 
 ### Scope
-ownCloud is an open source and free software that is used to create your own cloud storage solution. ownCloud server can be created on Windows as well as Linux platforms. The client side supports a range of devices such as Windows, Mac OSX, Android and iPhone.
+ownCloud is an open source and free software that is used to create your own cloud storage solution. ownCloud server can be created on Windows as well as Linux platforms. The client side of the system supports a range of devices such as Windows, Mac OSX, Android and iPhone.
 
 ### Need
-OwnCloud operates as a very simple way to set up your own syncing cloud storage system on your own server or web site. It is also quick and easy to set up, and does not require advanced technical knowledge. Unlike other cloud storage solutions that provide only file syching, ownCloud is a powerful software that allows people to make and share their own apps that run on ownCloud including text editors, task lists, and much more.
+OwnCloud operates as a very simple way to set up your own syncing cloud storage system on your own server or web site. It is also quick and easy to set up, and does not require advanced technical knowledge. Unlike other cloud storage solutions that provide only file synchronization, ownCloud is a powerful software that allows creating and sharing apps that run on ownCloud including text editors, task lists, and much more.
 
 ### Benefits
-- Sharing with ownCloud you can share files with everybody including none ownCloud users
-- Syncing with ownCloud you can sync files from multiple devices including smartphones and tablets
-- Live Collaboration with ownCloud you can collaborate in real time e.g. editing documents.
-- Universal File Access from ownCloud you can access all data spread out in multiple locations like Windows shared drives, SharePoint, S3  buckets, etc.
-- Favorites Files favorite files in ownCloud for easy access
-- Active Directory/LDAP AD integration for corporate users.
+- Share files with everybody including non-ownCloud users.
+- Synchronize files from multiple devices including smartphones and tablets.
+- Live collaboration with ownCloud in real time.
+- Universal file access from ownCloud from multiple locations like Windows shared-drives, SharePoint, S3  buckets and so on.
+- Bookmark favorite files for quick access.
+- Active directory and LDAP AD integration for corporate users.
 
 # Install and Configure an ownCloud Server
 
@@ -31,7 +31,7 @@ This section walks you through installing ownCloud using a tar file or a zip fil
 To install ownCloud server, follow these steps:
 1. Go to the [ownCloud download page](https://owncloud.org/download/).
 
-2. From the **Resources** section, download the **Tar file** or **Zip file**. Based on your preference, a file downloads with the name `owncloud-x.y.z.tar.bz2` (Tar installation) or `owncloud-x.y.z.zip` (Zip installation), where *x.y.z* is the version number.
+2. From the **Resources** section, download either the **Tar file** or **Zip file**. Based on your preference, a file downloads with the name `owncloud-x.y.z.tar.bz2` (tar installation) or `owncloud-x.y.z.zip` (zip installation), where *x.y.z* is the version number.
 
 3. Download the corresponding checksum file. The supported options are md5 and sha256.
 
@@ -53,17 +53,22 @@ To install ownCloud server, follow these steps:
 
 6.	Verify the PGP signature.
 
-       <code>
+      <code>
        wget https://download.owncloud.org/community/owncloud-x.y.z.tar.bz2.asc <br>
        wget https://owncloud.org/owncloud.asc <br>
        gpg --import owncloud.asc <br>
        gpg --verify owncloud-x.y.z.tar.bz2.asc owncloud-x.y.z.tar.bz2 <br>
-       </code>
+      </code>
 
 7. Extract the archived contents.
 
+    **Tar:**
     <code>
     tar -xjf owncloud-x.y.z.tar.bz2 <br>
+    </code>
+    
+    **Zip:**
+    <code>
     unzip owncloud-x.y.z.zip <br>
     </code>
 
@@ -73,15 +78,15 @@ The content is unpacked to an `owncloud` directory. Copy this directory to a des
 
 > **Note:** On HTTP servers, it is recommended to install ownCloud outside of the document root.
 
-    <code>
+   <code>
     cp -r owncloud /path/to/webserver/document-root
-    </code>
+   </code>
 
 The path is replaced by the document root of your web server:
 
-    <code>
+   <code>
     cp -r owncloud /var/www
-    </code>
+   </code>
 
 # Connect to ownCloud Server using LDAP
 
@@ -96,11 +101,11 @@ To enable users to connect to the ownCloud server, perform the following steps:
      alt="LDAP Server Settings"
      style="float: left; margin-right: 10px;" />
 2. In LDAP window, set the following settings under the Server tab:
-  1. Host: Enter the IP address of the LDAP server.  
-  2. Port: Set the port number to **8080** to connect to the LDAP server. 
+  1. `Host:` Enter the IP address of the LDAP server.  
+  2. `Port:` Set the port number to **8080** to connect to the LDAP server. 
   3. Click **Detect Port**.
-  4. User DN and Base DN: Enter the name as DN of a user with permissions to do searches in the LDAP directory. Enter the base DN of LDAP, from where all users and groups can be reached.
-  5. Password: Set the password for the user. For anonymous access, leave the field empty.
+  4. `User DN and Base DN:` Enter the name as DN of a user with permissions to do searches in the LDAP directory. Enter the base DN of LDAP, from where all users and groups can be reached.
+  5. `Password:` Set the password for the user. For anonymous access, leave the field empty.
 3. Click **Test Configuration**.
 
 # Create a New User Account
@@ -134,6 +139,7 @@ To connect to ownCloud server using desktop or mobile client and sync data, foll
 In addition, choose a synchronization option with the local folder from one of these choices:
   - Keep local data
   - Start a clean sync (Erases the local folder)
+  
 7. Click **Connect**.
 8. After the connection is established, click **Finish** to save the settings.
 
