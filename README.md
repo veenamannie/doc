@@ -97,9 +97,9 @@ Before you begin, ensure that you have enabled the **LDAP user and group backend
 
 To enable users to connect to the ownCloud server, perform the following steps:
 1. In the Admin page, navigate to the LDAP basic settings.  
-     <img src="ldap-server.png"
-     alt="LDAP Server Settings"
-     style="float: left; margin-right: 10px;" />
+
+     ![ldap-server](https://user-images.githubusercontent.com/49917749/56632022-731d0800-6675-11e9-910a-8132fda6c12d.png)
+
 2. In LDAP window, set the following settings under the Server tab:
   1. `Host:` Enter the IP address of the LDAP server.  
   2. `Port:` Set the port number to **8080** to connect to the LDAP server. 
@@ -133,12 +133,12 @@ To connect to ownCloud server using desktop or mobile client and sync data, foll
 4. In the Server Address field, enter the IP address of the owncloud server.
 5. Enter your username and password, and click **Next**.
 6. Choose a synchronization option with the server from one of these choices: 
-  - Sync everything from server (size)
-  - Choose what to sync
+   - Sync everything from server (size)
+   - Choose what to sync
   
 In addition, choose a synchronization option with the local folder from one of these choices:
-  - Keep local data
-  - Start a clean sync (Erases the local folder)
+   - Keep local data
+   - Start a clean sync (Erases the local folder)
   
 7. Click **Connect**.
 8. After the connection is established, click **Finish** to save the settings.
